@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- <a id="main tag" href="" download>click</a> -->
+        <script>
+            let a=document.createElement('a');
+            let parm=new URLSearchParams(window.location.search);
+            a.href=parm.get('url');
+            a.download=a.href.split('/').pop();
+            console.log(a.download);
+            a.textContent='click';
+            document.body.appendChild(a);
+            // a.click();
+            // document.body.removeChild(a);
+        </script>
+    </body>
+</html>
